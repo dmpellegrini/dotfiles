@@ -13,11 +13,11 @@
     - ~/Work
 
 - shell:
-  - echo "hey you guys"
+  # - echo "hey you guys"
   - 
     command: ./test.zsh
     stdout: true
     stderr: true
   # - sleep 5
- # - [git submodule update --init --recursive, Installing submodules]
+  # - [git submodule update --init --recursive, Installing submodules]
 
