@@ -1,0 +1,38 @@
+# Taps (Repositories)
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+
+# Brews (Packages)
+brew "bat"
+brew "fd"
+brew "git"
+brew "python@3.11"
+brew "httpie"
+brew "mongosh"
+brew "neovim"
+brew "perl"
+brew "pipenv"
+brew "postgresql@14", restart_service: true
+brew "python@3.10"
+brew "railway"
+brew "rbenv"
+brew "ripgrep"
+brew "ruby"
+brew "trash"
+brew "tree"
+brew "vim"
+brew "wget"
+brew "zsh"
+brew "zsh-completions"
+brew "mongodb/brew/mongodb-community"
+brew "exa"
+
+# Casks (Applications)
+cask "alfred"
+cask "iterm2"
+cask "postman"
+cask "visual-studio-code"
+cask "dropbox"
