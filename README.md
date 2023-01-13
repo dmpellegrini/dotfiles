@@ -1,3 +1,5 @@
 # dotfiles
-This is my most up to date dot files repository
-Use it at your own risk!
+This is my most up to date dot files repository.
+Enter it at your own risk!
+
+-Add stuff to homebrew
