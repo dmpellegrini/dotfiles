@@ -1,12 +1,10 @@
-# Taps (Repositories)
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
-
-# Brews (Packages)
 brew "bat"
+brew "exa"
 brew "fd"
 brew "git"
 brew "python@3.11"
@@ -28,11 +26,9 @@ brew "wget"
 brew "zsh"
 brew "zsh-completions"
 brew "mongodb/brew/mongodb-community"
-brew "exa"
-
-# Casks (Applications)
 cask "alfred"
+cask "dropbox"
+cask "gitkraken"
 cask "iterm2"
 cask "postman"
 cask "visual-studio-code"
-cask "dropbox"
