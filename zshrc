@@ -9,6 +9,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Create Aliases
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
+alias bbd='brew bundle dump --force --describe'
 
 # Customize Prompts(s)
 PROMPT='
