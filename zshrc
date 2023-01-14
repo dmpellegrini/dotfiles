@@ -1,4 +1,4 @@
-echo 'Hello Danny'
+echo 'Hello from .zshrc'
 
 # Set Variables
 # Syntax highlighting for man pages using bat
@@ -23,6 +23,10 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Write Handy Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
+}
+
+function exists() {
+  command -v $1 >/dev/null 2>&1
 }
 # Use ZSH Plugins
 
