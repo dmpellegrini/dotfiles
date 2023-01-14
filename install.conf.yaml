@@ -8,6 +8,9 @@
 #     ~/.vim: vim
     ~/.zshrc:  
     ~/.gitconfig:  
+    ~/.config:
+      create: true
+      path: config
 
 - create:
     - ~/Work
