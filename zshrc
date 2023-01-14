@@ -10,6 +10,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
+alias trail='<<<${(F)path}'
 
 # Customize Prompts(s)
 PROMPT='
@@ -25,10 +26,6 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
-
-# function exists() {
-#   command -v $1 >/dev/null 2>&1
-# }
 
 # Use ZSH Plugins
 
