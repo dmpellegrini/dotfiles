@@ -25,9 +25,10 @@ function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
-function exists() {
-  command -v $1 >/dev/null 2>&1
-}
+# function exists() {
+#   command -v $1 >/dev/null 2>&1
+# }
+
 # Use ZSH Plugins
 
 # ... And other Surprises
