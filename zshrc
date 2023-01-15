@@ -7,6 +7,7 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 export NULLCMD=bat
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
+export LVIM_COMMAND="$HOME/.local/bin"
 
 # Changes ZSH Options
 
@@ -26,6 +27,7 @@ RPROMPT='%*'
 typeset -U path
 
 path=(
+  "$LVIM_COMMAND"
   "$N_PREFIX/bin"
   $path
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
