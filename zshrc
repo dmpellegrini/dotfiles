@@ -43,7 +43,7 @@ zstyle ':vcs_info:*' unstagedstr %F{red}'*'%f
 zstyle ':vcs_info:*' stagedstr %F{green}'+'%f
 
 # Formats the style of the prompt
-zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f %u %c)'
+zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 # Add Locations to $PATH array
