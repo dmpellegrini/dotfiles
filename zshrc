@@ -32,10 +32,10 @@ GIT_PROMPT_COLOR="blue"
 
 # Customizes prompt with current directory, shell level and git repo
 PROMPT='
-%1~ %L ${vcs_info_msg_0_} %# '
+%1~ ${vcs_info_msg_0_}'
 
 # Adds time to right side  of the prompt
-RPROMPT='%*'
+RPROMPT='%L %*'
 
 # Adds staged/unstaged strings to prompt 
 zstyle ':vcs_info:*' check-for-changes true
@@ -43,7 +43,7 @@ zstyle ':vcs_info:*' unstagedstr %F{red}'*'%f
 zstyle ':vcs_info:*' stagedstr %F{green}'+'%f
 
 # Formats the style of the prompt
-zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f%u%c)'
+zstyle ':vcs_info:git:*' formats '(%F{blue}%b%f%u%c) '
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 # Add Locations to $PATH array
