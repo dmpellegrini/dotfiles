@@ -21,6 +21,8 @@ brew "less"
 brew "mas"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
+# Node version management
+brew "n"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility

@@ -5,6 +5,8 @@ echo 'Hello from .zshrc'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export NULLCMD=bat
+export N_PREFIX="$HOME/.n"
+export PREFIX="$N_PREFIX"
 
 # Changes ZSH Options
 
@@ -19,9 +21,15 @@ PROMPT='
 %1~ %L %# '
 
 RPROMPT='%*'
-# Add Locations to $PATH Variable
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Add Locations to $PATH array
+
+typeset -U path
+
+path=(
+  "$N_PREFIX/bin"
+  $path
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
 
 # Write Handy Functions
 function mkcd() {
