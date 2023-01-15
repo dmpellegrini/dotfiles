@@ -5,7 +5,7 @@
 - clean: ['~']
 
 - link:
-#     ~/.vim: vim
+    ~/.vimrc:
     ~/.zshrc:  
     ~/.zshenv:  
     ~/.gitconfig:  
@@ -26,4 +26,3 @@
   - command: ./setup_node.zsh
     stdout: true
     stderr: true
-
