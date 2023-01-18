@@ -10,7 +10,6 @@ export PREFIX="$N_PREFIX"
 export LVIM_COMMAND="$HOME/.local/bin"
 
 # Create Aliases
-alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
