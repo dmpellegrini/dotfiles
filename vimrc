@@ -55,6 +55,10 @@ call plug#end()
 
 "VISUAL STUFF
 
+"Sets the cursor to line in insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 "Gives additional syntax highlighting
 syntax on
 
@@ -128,9 +132,12 @@ set noswapfile
 
 "REMAPS
 
-"Remaps ;; to key to : 
-"inoremap ;; <Esc>:
-"noremap ;; :
+"Sets leader key to spacebar
+let mapleader = " "
+
+"Remaps write file and quite file commands
+nnoremap <leader>q :q<cr>
+nnoremap <leader>w :w<cr>
 
 "Remaps window tabing keys
 noremap <C-h> <C-w>h
@@ -142,5 +149,5 @@ inoremap <C-h> <C-c><C-w>h
 inoremap <C-j> <C-c><C-w>j
 inoremap <C-k> <C-c><C-w>k
 inoremap <C-l> <C-c><C-w>l
-		                
-    
+
+
