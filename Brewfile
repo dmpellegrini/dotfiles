@@ -9,6 +9,8 @@ brew "bat"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Interpreted, interactive, object-oriented programming language
@@ -19,6 +21,8 @@ brew "httpie"
 brew "less"
 # Mac App Store command-line interface
 brew "mas"
+# Platform built on V8 to build network applications
+brew "node@16"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Node version management
