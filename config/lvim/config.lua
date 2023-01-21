@@ -185,6 +185,7 @@ lvim.plugins = {
     },
     {'mfussenegger/nvim-dap-python'},
     {"AckslD/swenv.nvim"},
+    {"sbdchd/neoformat"},
 }
 
 --Javascript Debug Adaptor
