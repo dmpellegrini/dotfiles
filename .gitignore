@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
 Brewfile.lock.json
-hosts.yaml
+hosts.yml
