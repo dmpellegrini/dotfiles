@@ -60,7 +60,7 @@ brew "zsh"
 # Additional completion definitions for zsh
 brew "zsh-completions"
 # High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
+brew "mongodb/brew/mongodb-community", link: false
 # Application launcher and productivity software
 cask "alfred"
 # Client for the Dropbox cloud storage service
