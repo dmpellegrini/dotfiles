@@ -67,6 +67,8 @@ cask "alfred"
 cask "dropbox"
 # Git client focusing on productivity
 cask "gitkraken"
+# Terminal built on web technologies
+cask "hyper"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Collaboration platform for API development
