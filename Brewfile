@@ -9,6 +9,8 @@ brew "bat"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
