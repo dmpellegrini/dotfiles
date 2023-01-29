@@ -183,7 +183,7 @@ lvim.plugins = {
       setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
       ft = { "markdown" },
     },
-    {'mfussenegger/nvim-dap-python'},
+    {"mfussenegger/nvim-dap-python"},
     {"AckslD/swenv.nvim"},
     {"sbdchd/neoformat"},
 }

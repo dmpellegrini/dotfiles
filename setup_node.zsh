@@ -18,6 +18,7 @@ npm install --global http-server
 npm install --global live-server
 npm install --global nodemon
 npm install --global trash-cli
+npm install --global neovim
 
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0

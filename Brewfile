@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
@@ -19,8 +20,14 @@ brew "git"
 brew "python@3.11"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Network authentication protocol
+brew "krb5"
 # Pager program similar to more
 brew "less"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Utility for directing compilation
+brew "make"
 # Mac App Store command-line interface
 brew "mas"
 # Platform built on V8 to build network applications
@@ -40,7 +47,7 @@ brew "pipenv"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
+brew "python@3.10", link: false
 # Develop and deploy code with zero configuration
 brew "railway"
 # Ruby version manager
@@ -65,22 +72,25 @@ brew "zsh-completions"
 brew "mongodb/brew/mongodb-community", link: false
 # Application launcher and productivity software
 cask "alfred"
+# Application uninstaller
+cask "appcleaner"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
 # Git client focusing on productivity
 cask "gitkraken"
 # Terminal built on web technologies
 cask "hyper"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Keyboard customizer
+cask "karabiner-elements"
 # Collaboration platform for API development
 cask "postman"
 # Open-source code editor
 cask "visual-studio-code"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
