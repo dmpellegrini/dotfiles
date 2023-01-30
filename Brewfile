@@ -1,3 +1,4 @@
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -25,7 +26,7 @@ brew "krb5"
 # Pager program similar to more
 brew "less"
 # Package manager for the Lua programming language
-brew "luarocks"
+brew "luarocks", link: false
 # Utility for directing compilation
 brew "make"
 # Mac App Store command-line interface
@@ -68,6 +69,8 @@ brew "wget"
 brew "zsh"
 # Additional completion definitions for zsh
 brew "zsh-completions"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community", link: false
 # Application launcher and productivity software
@@ -90,7 +93,10 @@ cask "karabiner-elements"
 cask "postman"
 # Open-source code editor
 cask "visual-studio-code"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959

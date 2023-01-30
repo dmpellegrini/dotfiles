@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo "\n<<< Starting Homebrew Setup >>>\n"
+echo "\n<<< Starting Rust Setup >>>\n"
 
 if exists rustup; then
   echo "rustup exists, skipping install"
