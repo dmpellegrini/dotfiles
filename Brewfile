@@ -26,7 +26,7 @@ brew "krb5"
 # Pager program similar to more
 brew "less"
 # Package manager for the Lua programming language
-brew "luarocks", link: false
+brew "luarocks"
 # Utility for directing compilation
 brew "make"
 # Mac App Store command-line interface
@@ -48,7 +48,7 @@ brew "pipenv"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10", link: false
+brew "python@3.10"
 # Develop and deploy code with zero configuration
 brew "railway"
 # Ruby version manager
@@ -72,7 +72,7 @@ brew "zsh-completions"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community", link: false
+brew "mongodb/brew/mongodb-community"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
