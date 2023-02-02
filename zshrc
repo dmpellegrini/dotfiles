@@ -8,6 +8,7 @@ export NULLCMD=bat
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 export LVIM_COMMAND="$HOME/.local/bin"
+export SBIN="/usr/local/sbin"
 
 # Create Aliases
 alias exa='exa -laFh --git'
@@ -52,6 +53,7 @@ typeset -U path
 path=(
   "$LVIM_COMMAND"
   "$N_PREFIX/bin"
+  "$SBIN"
   $path
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
