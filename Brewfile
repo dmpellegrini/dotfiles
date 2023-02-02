@@ -21,6 +21,8 @@ brew "git"
 brew "python@3.11"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Fast, Dynamic Programming Language
+brew "julia"
 # Network authentication protocol
 brew "krb5"
 # Pager program similar to more
@@ -43,6 +45,8 @@ brew "nano"
 brew "neovim"
 # Highly capable, feature-rich programming language
 brew "perl"
+# General-purpose scripting language
+brew "php"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
