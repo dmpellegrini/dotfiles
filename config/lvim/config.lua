@@ -19,8 +19,8 @@ lvim.colorscheme = "gruvbox-baby"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<leader>x"] = ":Exp<cr>"
-lvim.keys.normal_mode["<leader>t"] = ":Telescope<cr>"
+-- lvim.keys.normal_mode["<leader>x"] = ":Exp<cr>"
+-- lvim.keys.normal_mode["<leader>t"] = ":Telescope<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -189,6 +189,7 @@ lvim.plugins = {
     { "christoomey/vim-system-copy" },
     { "lunarvim/colorschemes" },
     { "luisiacc/gruvbox-baby" },
+    { "morhetz/gruvbox" },
     {"iamcco/markdown-preview.nvim",
       run = "cd app && npm install",
       setup = function() vim.g.mkdp_filetypes = { "markdown" } end,

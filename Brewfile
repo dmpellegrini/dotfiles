@@ -50,7 +50,7 @@ brew "php"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
-brew "postgresql@14", restart_service: true
+brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Develop and deploy code with zero configuration
@@ -81,6 +81,8 @@ brew "mongodb/brew/mongodb-community"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Voice and text chat software
+cask "discord"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Developer targeted fonts with a high number of glyphs
@@ -93,6 +95,10 @@ cask "hyper"
 cask "iterm2"
 # Keyboard customizer
 cask "karabiner-elements"
+# 2D game framework for Lua
+cask "love"
+# Explore and manipulate your MongoDB data
+cask "mongodb-compass"
 # Collaboration platform for API development
 cask "postman"
 # Open-source code editor
