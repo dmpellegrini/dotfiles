@@ -3,3 +3,6 @@ node_modules
 Brewfile.lock.json
 hosts.yml
 config/simple-update-notifier
+dfx
+identity.pem
+

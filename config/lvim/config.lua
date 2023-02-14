@@ -189,7 +189,10 @@ lvim.plugins = {
     { "christoomey/vim-system-copy" },
     { "lunarvim/colorschemes" },
     { "luisiacc/gruvbox-baby" },
-    { "morhetz/gruvbox" },
+    { "ellisonleao/gruvbox.nvim" },
+    { "jacoborus/tender.vim" },
+    { "Everblush/nvim", as = "everblush" },
+    { "catppuccin/nvim" },
     {"iamcco/markdown-preview.nvim",
       run = "cd app && npm install",
       setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
@@ -284,3 +287,4 @@ vim.opt.clipboard = ""
 vim.opt.cursorcolumn = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.hlsearch = false
