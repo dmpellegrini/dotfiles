@@ -1,153 +1,285 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""               
-"               
-"               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
-"               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
-"               ██║   ██║██║██╔████╔██║██████╔╝██║     
-"               ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║     
-"                ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
-"                 ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
-"               
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-	
-set nocompatible
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"PLUGINS
+"                     Danny's Scratch VIM R(un)C(ommands)                      "
 
-"All plugins loaded below this line"
-call plug#begin('~/.vim/plugged')
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Basic features of a vimrc"
-Plug 'tpope/vim-sensible'
 
-"Easy commenting
-Plug 'tpope/vim-commentary'
+" TEST SETTINGS
+"set listchars=space:_,tab:>~ list
 
-"Easy git hub commands
-Plug 'tpope/vim-fugitive'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Plugin for brackets and delimiters
-Plug 'tpope/vim-surround'
+" VIM-PLUG PLUGIN MANAGER
 
-"Color scheme
-Plug 'morhetz/gruvbox' 
+call plug#begin()
 
-"Additional Syntax Highlighting
-Plug 'sheerun/vim-polyglot'
+" Essential File Directory Navigation Plugin
+Plug 'preservim/nerdtree'
 
-"Cool status bar setting
+" Makes your status bar look sexy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"Gives me a way to copy out of Vim
-Plug 'christoomey/vim-system-copy'
+" Fuzzy finder finder
+Plug 'ctrlpvim/ctrlp.vim'
 
-"Provides a way to sort items in your file
-Plug 'christoomey/vim-sort-motion'
+" Vim Git Wrapper
+Plug 'tpope/vim-fugitive'
 
-"Gives you a way to looks at a graphic file directory
-Plug 'scrooloose/nerdtree'
+" Helpful plugin for surrounding syntax
+Plug 'tpope/vim-surround'
 
-"Gives you a way to preview your Markdown file
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
 
-"VISUAL STUFF
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Sets the cursor to line in insert mode
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+" AIRLINE PLUGIN CONFIG
+" let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
 
-"Gives additional syntax highlighting
-syntax on
+" Main Line Formatting and Symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
-"Gruvbox color setting
-set bg=dark
-let g:gruvbox_contrast_light = 'medium'
-let g:gruvbox_contrast_dark = 'hard'
+" Tab line formatting and symbols
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
 
-"Gruvbox color options
-colorscheme gruvbox
-
-"Airline Theme Stuff
-"let g:airline_base16_gruvbox_dark_hard=1
-
-"Adjusts tabs to display 4 spaces
-set tabstop=2 
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-set smarttab
-
-"Adjusts indent settings
-set autoindent
-set smartindent
-filetype plugin on
-filetype indent on
-
-"Settings for relative row numbers
-set number relativenumber
-set nu rnu
-set signcolumn=yes
-
-"Takes away redundant statusline bar
-set noshowmode
-
-"Displays cursor crossair
-set cursorline cursorcolumn
-
-"Page starts scrolling at 8 spaces
-set scrolloff=8
-
-"Puts new splits below and right
-set splitbelow splitright
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"TECHNICAL STUFF
+" VIM GENERAL CONFIGS
 
-"Looks for custom .vimrc file associated with directory of open file
+" Eliminates Vi compatibility for enhances Vim options
+set nocompatible
+
+" Reads both .vimrc and the .exrc in the current directory
 set exrc
 
-"Saves opened files into your buffer in the background w/o writing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" STATUS AND TAB LINE SETTINGS
+
+" Keep 1000 items in the command history
+set history=1000
+
+" Show the cursor position. (made obsolete with Airline)
+" set ruler
+
+" show incomplete commands.
+"set showcmd
+
+" shows a menu when using tab completion
+set wildmenu
+
+" keeps cursor at least n lines down when scrolling 
+set scrolloff=5
+
+" Shows the status of which mode you are in (made obsolete with Airline)
+set noshowmode
+
+" Ignores case when searching through wild menu
+set wildignorecase
+
+" sets the content of the tab line at the top of the file
+" set tabline=""
+
+" shows or hides the tabline  (0) is hidden (1) sometimes (2) always
+" set showtabline=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" SEARCHING
+
+" highlights all matches for search
+set nohlsearch
+
+" incrementally highlights a search word as you are typing it
+set incsearch
+
+" ingnores the case of the search pattern
+set ignorecase
+
+" only returns case with Capitalization when it's entered.
+set smartcase
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" TEXT EDITING
+
+" wraps text that's too long for the window
+set wrap
+
+" makes sure that vim doesn't line break in the middle of a word
+set linebreak
+
+" lines that wrap repeat maintain indentation
+set breakindent
+
+" takes away the joining of two spaces when combining lines.
+set nojoinspaces
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" TABBING AND INDENTING
+
+" Sets the value of the tab character
+set tabstop=4
+
+" Sets the value of the shift command
+set shiftwidth=4
+
+" Adds spaces equivalent to the tab value
+set expandtab
+
+" Sets the number of spaces that tabstop will use while editing
+set softtabstop=4
+
+" copies the indentation of the previous line to the next
+set autoindent
+
+" indents according to certain coding language standards like C
+set smartindent
+
+" uses shift width when inserting tabs (redundant with softtabstop)
+" set smarttab
+
+" preserves indentation structure when reindenting
+" set preserveindent
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" COPYING AND PASTING
+
+" uses clipboard as the unnamed register
+" set clipboard
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" COLOR SCHEME
+
+" sets vim syntax highlighting based on your terminal's background
+set background=dark
+
+" sets the colorscheme
+colorscheme slate
+
+" sets the syntax hilighting according to the terminal
+set termguicolors
+
+" COLUMN AND ROW LINES
+
+" makes a vertical line that follows the cursor
+set cursorline
+
+" makes a horizantal line that follows the cursor
+set cursorcolumn
+
+" sets a column to highlight
+set colorcolumn=80
+
+" puts a number in front of each row
+set number
+
+" sets the columns used for line numbers
+set numberwidth=5
+
+" sets relative line numbers for optimal jumping
+set relativenumber
+
+" includes a sign column in the gutter
+set signcolumn=auto
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" WINDOWS BUFFERS AND FILES
+
+" Puts new vertical window splits to the right
+set splitright
+
+" Puts new horizantal window splits to the bottom
+set splitbelow
+
+" Allows you to navigate buffers before saving
 set hidden
 
-"Highlights all items you are searching while typing
-set incsearch
-set nohlsearch
-"set hlsearch
+" creates a backup file if you have not saved the file
+" set backup
 
-"Ignores capitalization when searching
-set ignorecase 
+" sets the file extension for vim backup files
+" set backupext=_backup
 
-"Use capitalization if included in search
-set smartcase 
-
-"Makes it so that there is no swp file lurking
+" gets rid of the temporary swap files
 set noswapfile
 
-"Autocomplete settings
-"set complete+=kspell
-"set wildmenu
-
-"REMAPS
-
-"Sets leader key to spacebar
-let mapleader = " "
-
-"Remaps write file and quite file commands
-nnoremap <leader>q :q<cr>
-nnoremap <leader>w :w<cr>
-
-"Remaps window tabing keys
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-
-inoremap <C-h> <C-c><C-w>h
-inoremap <C-j> <C-c><C-w>j
-inoremap <C-k> <C-c><C-w>k
-inoremap <C-l> <C-c><C-w>l
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+" BELL OPTIONS
+
+" sets the bell to not ring under cetain conditions
+" set belloff	  
+
+" esnsures the bell doesn't wring on error
+set noerrorbells
+
+" makes a visual bell instead of beeping
+set visualbell
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" KEY MAPPINGS AND REMAPS
+
+" sets the default leader key the default key is \
+let mapleader=" "
+
+" sets the write and quit commands to spacebar + w || q 
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>q :q<CR>
+
+" sets window pane jumping to ctrl hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" sets window pane resizing to option hjkl
+nnoremap <Up> <C-w>+
+nnoremap <Down> <C-w>-
+nnoremap <Left> <C-w><
+nnoremap <Right> <C-w>>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" OPTIONS TO EXPLORE
+
+" complete
+" foldclose
+" regexengine
+" statusline
+" termguicolors
+
+" PLUGINS TO EXPLORE
+" jiangmiao/auto-pairs
+" andymass/vim-matchup
+" alvan/vim-closetag
+" machakann/vim-sandwich
+" tpope/vim-surround
