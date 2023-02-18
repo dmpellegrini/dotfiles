@@ -27,17 +27,29 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Vim Git Wrapper
 Plug 'tpope/vim-fugitive'
 
-" Helpful plugin for surrounding syntax
+" Helpful plugin for surrounding syntax and delimiters
 Plug 'tpope/vim-surround'
 
+" Beautiful pastelle style colorscheme
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" GRUVBOX COLORSCHEME CONFIG
+
+" sets the syntax hilighting according to the terminal
+set termguicolors
+let g:gruvbox_contrast_dark="medium"
+set background=dark
+colorscheme gruvbox
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " AIRLINE PLUGIN CONFIG
-" let g:airline_solarized_bg='dark'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 
 " Main Line Formatting and Symbols
@@ -173,13 +185,11 @@ set smartindent
 " COLOR SCHEME
 
 " sets vim syntax highlighting based on your terminal's background
-set background=dark
+" set background=dark
 
 " sets the colorscheme
-colorscheme slate
+" colorscheme slate
 
-" sets the syntax hilighting according to the terminal
-set termguicolors
 
 " COLUMN AND ROW LINES
 
