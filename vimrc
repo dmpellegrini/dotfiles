@@ -337,6 +337,10 @@ set breakindent
 " takes away the joining of two spaces when combining lines.
 set nojoinspaces
 
+" sets the cursor to thin while in insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
