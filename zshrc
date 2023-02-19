@@ -14,6 +14,7 @@ export SBIN="/usr/local/sbin"
 alias exa='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
+alias vimsearch="vim '$(fzf -e)'"
 
 # Customize Prompt(s)
 # Git Status in Prompt

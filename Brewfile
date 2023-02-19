@@ -11,12 +11,16 @@ brew "bat"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -33,8 +37,6 @@ brew "luarocks"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
-# Platform built on V8 to build network applications
-brew "node@16"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Node version management
@@ -43,6 +45,8 @@ brew "n"
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
+brew "node@16"
 # Highly capable, feature-rich programming language
 brew "perl"
 # General-purpose scripting language
@@ -61,6 +65,8 @@ brew "rbenv"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Code-search similar to ack
+brew "the_silver_searcher"
 # CLI tool that moves files or folder to the trash
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
