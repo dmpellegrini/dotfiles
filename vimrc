@@ -20,15 +20,9 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
-
 " Additional Fuzzy Finder Based On Terminal FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" Window Preview for FZF plugin
-" Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 
 " Vim Git Wrapper
 Plug 'tpope/vim-fugitive'
@@ -51,8 +45,6 @@ Plug 'vim-syntastic/syntastic'
 " Autocompletion and LSP integration
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" 
-
 " Allows access to the system clipboard
 Plug 'christoomey/vim-system-copy'
 
@@ -63,6 +55,30 @@ call plug#end()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" KEY MAPPINGS AND REMAPS
+
+" sets the default leader key the default key is \
+let mapleader=" "
+
+" sets the write and quit commands to spacebar + w || q 
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>q :q<CR>
+
+" sets window pane jumping to ctrl hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" sets window pane resizing to option hjkl
+nnoremap <S-Up> <C-w>+
+nnoremap <S-Down> <C-w>-
+nnoremap <S-Left> <C-w><
+nnoremap <S-Right> <C-w>>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " COMMAND ON COMPLETE CONFIG
 
@@ -241,9 +257,6 @@ nnoremap <leader>g :GFiles<CR>
 
 "NERD TREE CONFIG SETTINGS
 nnoremap <leader>e :NERDTreeToggle<CR>
-
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -467,29 +480,6 @@ set noerrorbells
 " makes a visual bell instead of beeping
 set visualbell
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" KEY MAPPINGS AND REMAPS
-
-" sets the default leader key the default key is \
-let mapleader=" "
-
-" sets the write and quit commands to spacebar + w || q 
-nnoremap <leader>w :w!<CR>
-nnoremap <leader>q :q<CR>
-
-" sets window pane jumping to ctrl hjkl
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" sets window pane resizing to option hjkl
-nnoremap <Up> <C-w>+
-nnoremap <Down> <C-w>-
-nnoremap <Left> <C-w><
-nnoremap <Right> <C-w>>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
