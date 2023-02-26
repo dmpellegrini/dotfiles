@@ -7,6 +7,8 @@ tap "homebrew/services"
 tap "mongodb/brew"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Reimplementation of ctags(1)
+brew "ctags"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
@@ -67,6 +69,8 @@ brew "ripgrep"
 brew "ruby"
 # Code-search similar to ack
 brew "the_silver_searcher"
+# Terminal multiplexer
+brew "tmux"
 # CLI tool that moves files or folder to the trash
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
@@ -117,4 +121,5 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
+mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
