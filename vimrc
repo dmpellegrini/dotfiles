@@ -274,7 +274,7 @@ set exrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" STATUS AND TAB LINE SETTINGS
+" STATUS AND TABLINE SETTINGS
 
 " Keep 1000 items in the command history
 set history=1000
@@ -347,16 +347,16 @@ let &t_EI = "\e[2 q"
 " TABBING AND INDENTING
 
 " Sets the value of the tab character
-set tabstop=4
+set tabstop=2
 
 " Sets the value of the shift command
-set shiftwidth=4
+set shiftwidth=2
 
 " Adds spaces equivalent to the tab value
 set expandtab
 
 " Sets the number of spaces that tabstop will use while editing
-set softtabstop=4
+set softtabstop=2
 
 " copies the indentation of the previous line to the next
 set autoindent
@@ -365,7 +365,7 @@ set autoindent
 set smartindent
 
 " uses shift width when inserting tabs (redundant with softtabstop)
-" set smarttab
+set smarttab
 
 " preserves indentation structure when reindenting
 " set preserveindent
@@ -442,7 +442,7 @@ set numberwidth=5
 set relativenumber
 
 " includes a sign column in the gutter
-set signcolumn=auto
+set signcolumn=yes
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
