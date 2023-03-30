@@ -347,16 +347,16 @@ let &t_EI = "\e[2 q"
 " TABBING AND INDENTING
 
 " Sets the value of the tab character
-set tabstop=2
+set tabstop=4
 
 " Sets the value of the shift command
-set shiftwidth=2
+set shiftwidth=4
 
 " Adds spaces equivalent to the tab value
 set expandtab
 
 " Sets the number of spaces that tabstop will use while editing
-set softtabstop=2
+set softtabstop=4
 
 " copies the indentation of the previous line to the next
 set autoindent
