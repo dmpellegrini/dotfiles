@@ -5,4 +5,5 @@ hosts.yml
 config/simple-update-notifier
 dfx
 identity.pem
+vim/undodir/
 
