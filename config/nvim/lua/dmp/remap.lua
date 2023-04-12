@@ -34,3 +34,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 --Per Primagen's Advice
 vim.keymap.set("n", "Q", "<nop>")
+
+--Remaps For Buffers
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")

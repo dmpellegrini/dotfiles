@@ -7,13 +7,11 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-
 
     use {'sainnhe/gruvbox-material', as = 'gruvbox-material'}
 
@@ -24,6 +22,8 @@ return require('packer').startup(function(use)
     use {'tpope/vim-fugitive'}
 
     use {'tpope/vim-commentary'}
+
+    use {'tpope/vim-surround'}
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -59,6 +59,12 @@ return require('packer').startup(function(use)
         },
         config = function()
             require("nvim-tree").setup {}
+        end
+    },
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
         end
     }
 }
