@@ -5,11 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    use {'wbthomason/packer.nvim'}
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -31,26 +30,25 @@ return require('packer').startup(function(use)
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
+            { 'williamboman/mason.nvim', run = function()
                 pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            end
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-    },
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        },
+    }
 
     use {
         'vim-airline/vim-airline',
         'vim-airline/vim-airline-themes'
-    },
+    }
 
-    use{"github/copilot.vim"},
+    use{"github/copilot.vim"}
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -60,12 +58,32 @@ return require('packer').startup(function(use)
         config = function()
             require("nvim-tree").setup {}
         end
-    },
+    }
+
     use {
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup()
         end
     }
-}
+
+    use {'mfussenegger/nvim-dap'}
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+    use { "nvim-telescope/telescope-dap.nvim" }
+
+    use {'mfussenegger/nvim-dap-python'}
+
+    use {'theHamsta/nvim-dap-virtual-text'}
+
+    use {"folke/neodev.nvim"}
+
+    use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+
+    use {
+        "microsoft/vscode-js-debug",
+        opt = true,
+        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+    }
 end)
