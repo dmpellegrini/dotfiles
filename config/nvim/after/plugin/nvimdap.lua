@@ -29,9 +29,26 @@ for _, language in ipairs({ "typescript", "javascript" }) do
     }
 end
 
+
 -- Python Debugger
 
 require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+
+
+-- Neovim Lua Debugger
+
+local dap = require"dap"
+dap.configurations.lua = {
+    { 
+        type = 'nlua', 
+        request = 'attach',
+        name = "Attach to running Neovim instance",
+    }
+}
+
+dap.adapters.nlua = function(callback, config)
+    callback({ type = 'server', host = config.host or "127.0.0.1", port = config.port or 8086 })
+end
 
 -- Keymaps
 vim.keymap.set('n', '<Leader>ct', function() require('dap').continue() end)

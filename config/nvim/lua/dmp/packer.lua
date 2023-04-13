@@ -86,4 +86,6 @@ return require('packer').startup(function(use)
         opt = true,
         run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
+
+    use {'jbyuki/one-small-step-for-vimkind'}
 end)
