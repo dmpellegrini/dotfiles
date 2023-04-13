@@ -5,10 +5,14 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
+# New file format for still image compression
+brew "jpeg-xl"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Reimplementation of ctags(1)
 brew "ctags"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
@@ -23,16 +27,22 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Improved top (interactive process viewer)
+brew "htop"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
+brew "python@3.11", link: false
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Optimized BLAS library
+brew "openblas"
 # Fast, Dynamic Programming Language
 brew "julia"
 # Network authentication protocol
 brew "krb5"
 # Pager program similar to more
 brew "less"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Utility for directing compilation
@@ -65,8 +75,6 @@ brew "railway"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Terminal multiplexer
