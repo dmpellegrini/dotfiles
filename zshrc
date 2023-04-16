@@ -57,6 +57,7 @@ path=(
   "$SBIN"
   $path
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  "/Users/danielepellegrini/Library/Python/3.11/bin"
 )
 
 # Write Handy Functions

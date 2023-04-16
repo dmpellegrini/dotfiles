@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
         'vim-airline/vim-airline-themes'
     }
 
-    use{"github/copilot.vim"}
+    -- use{"github/copilot.vim"}
 
     use {
         'nvim-tree/nvim-tree.lua',
