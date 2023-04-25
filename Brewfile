@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
+tap "platformsh/tap"
 # New file format for still image compression
 brew "jpeg-xl"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -57,8 +58,6 @@ brew "n"
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
-brew "node@16"
 # Highly capable, feature-rich programming language
 brew "perl"
 # General-purpose scripting language
@@ -95,6 +94,8 @@ brew "zsh-completions"
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+# Platform.sh CLI
+brew "platformsh/tap/platformsh-cli"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
@@ -115,7 +116,7 @@ cask "iterm2"
 cask "karabiner-elements"
 # 2D game framework for Lua
 cask "love"
-# Explore and manipulate your MongoDB data
+# Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # Collaboration platform for API development
 cask "postman"
