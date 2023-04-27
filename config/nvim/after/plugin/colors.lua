@@ -1,4 +1,3 @@
-
 vim.cmd('let g:gruvbox_material_background = "medium" ')
 vim.cmd('let g:gruvbox_material_foreground = "original" ')
 vim.cmd('let g:gruvbox_material_enable_bold = 1 ')

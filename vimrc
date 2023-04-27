@@ -389,7 +389,7 @@ set smarttab
 set background=dark
 
 " allows vim to access the colorscheme of terminal
-set termguicolors
+" set termguicolors
 
 " sets the colorscheme
 " colorscheme slate
