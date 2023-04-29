@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "starter"]
+	path = starter
+	url = https://github.com/LazyVim/starter

@@ -15,6 +15,7 @@ alias exa='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
 alias vimfzf='vim "$(fzf -e)"'
+alias lzvim="NVIM_APPNAME=LazyVim nvim"
 
 # Customize Prompt(s)
 # Git Status in Prompt
@@ -64,6 +65,20 @@ path=(
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
+
+function nvims() {
+  items=("default" "LazyVim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"
 
 # Use ZSH Plugins
 
