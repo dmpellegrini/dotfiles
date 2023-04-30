@@ -16,6 +16,7 @@ alias bbd='brew bundle dump --force --describe'
 alias trail='<<<${(F)path}'
 alias vimfzf='vim "$(fzf -e)"'
 alias lzvim="NVIM_APPNAME=LazyVim nvim"
+alias dvim="NVIM_APPNAME=dvim nvim"
 
 # Customize Prompt(s)
 # Git Status in Prompt
@@ -67,7 +68,7 @@ function mkcd() {
 }
 
 function nvims() {
-  items=("default" "LazyVim")
+  items=("default" "dvim" "LazyVim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
