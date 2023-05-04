@@ -6,6 +6,9 @@ local keymap = vim.api.nvim_set_keymap
 
 vim.g.mapleader = " "
 
+-- Sets shortcut for netrw
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", options)
+
 -- Sets Write and Quit ShortCut Settings
 keymap("n", "<leader>w", ":w<CR>", options)
 keymap("n", "<leader>q", ":q!<CR>", options)
@@ -21,6 +24,10 @@ keymap("n", "<S-Up>", "<C-w>+", options)
 keymap("n", "<S-Down>", "<C-w>-", options)
 keymap("n", "<S-Left>", "<C-w><", options)
 keymap("n", "<S-Right>", "<C-w>>", options)
+
+--Sets Buffer Jumping
+keymap("n", "<S-h>", ":bp<cr>", options)
+keymap("n", "<S-l>", ":bn<cr>", options)
 
 --Allows you to move block of text
 keymap("v", "J", ":m '>+1<CR>gv=gv", options)

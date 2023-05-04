@@ -24,10 +24,8 @@ local options = {
 
 	termguicolors = true,
 
-	scrolloff = 8,
+	scrolloff = 5,
 	signcolumn = "yes",
-
-	updatetime = 50,
 
 	colorcolumn = "80",
 	cursorline = true,
@@ -44,15 +42,15 @@ local options = {
 
 	wildignorecase = true,
 
-  timeoutlen = 300,
-  updatetime = 300,
+	timeoutlen = 300,
+	updatetime = 50,
 
-  fileencoding = "utf-8"
+	fileencoding = "utf-8",
 }
 
 for k, v in pairs(options) do
-  vim.opt[k] = v
+	vim.opt[k] = v
 end
 
-vim.opt.formatoptions:remove({"c", "r", "o"})
+vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
